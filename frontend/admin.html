@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админка — PlayKeys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <span class="header-offset" aria-hidden="true"></span>
+      <a class="catalog-btn" href="index.html">
+        <img src="assets/icon-catalog.svg" width="20" height="20" alt="" />
+        Каталог
+      </a>
+      <form class="search" action="#" onsubmit="return false">
+        <div class="search-inner">
+          <input type="search" placeholder="Игра, приложение или услуга..." />
+          <button class="fav" type="button" aria-label="Избранное">
+            <img src="assets/icon-heart.svg" width="14" height="13" alt="" />
+          </button>
+        </div>
+        <button class="search-go" type="submit" aria-label="Найти">
+          <img src="assets/icon-search.svg" width="20" height="20" alt="" />
+        </button>
+      </form>
+      <a class="profile" href="index.html" title="На главную">
+        <img src="assets/icon-profile.svg" alt="" />
+      </a>
+    </header>
+    <main class="admin-card" style="max-width:960px">
+      <h1>Проблемные заказы</h1>
+      <div class="admin-form">
+        <input data-token placeholder="Bearer token" />
+        <button data-load type="button">Обновить</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th>order_id</th><th>sku</th><th>status</th><th>amount</th><th>key</th><th></th></tr>
+        </thead>
+        <tbody data-table></tbody>
+      </table>
+      <h2>Пополнить пул ключей</h2>
+      <div class="admin-form">
+        <input data-sku value="KEY-GTA5" />
+        <input data-codes placeholder="CODE-ONE, CODE-TWO" style="min-width:280px" />
+        <button data-restock type="button">Добавить</button>
+      </div>
+      <h2>Цена и наличие</h2>
+      <div class="admin-form">
+        <input data-patch-sku value="KEY-CS2-PRIME" />
+        <input data-patch-price type="number" placeholder="price" />
+        <label class="admin-check"><input type="checkbox" data-patch-available checked /> в продаже</label>
+        <button data-patch type="button">Обновить товар</button>
+      </div>
+      <p data-msg></p>
+    </main>
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

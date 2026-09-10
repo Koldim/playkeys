@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Заказ — PlayKeys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <span class="header-offset" aria-hidden="true"></span>
+      <a class="catalog-btn" href="index.html">
+        <img src="assets/icon-catalog.svg" width="20" height="20" alt="" />
+        Каталог
+      </a>
+      <form class="search" action="#" onsubmit="return false">
+        <div class="search-inner">
+          <input type="search" placeholder="Игра, приложение или услуга..." />
+          <button class="fav" type="button" aria-label="Избранное">
+            <img src="assets/icon-heart.svg" width="14" height="13" alt="" />
+          </button>
+        </div>
+        <button class="search-go" type="submit" aria-label="Найти">
+          <img src="assets/icon-search.svg" width="20" height="20" alt="" />
+        </button>
+      </form>
+      <a class="profile" href="index.html" title="На главную">
+        <img src="assets/icon-profile.svg" alt="" />
+      </a>
+    </header>
+    <main class="order-card">
+      <h1>Статус заказа</h1>
+      <div class="status" data-status>loading</div>
+      <p class="hold-timer" data-hold-timer hidden></p>
+      <div class="meta" data-meta></div>
+      <div class="key-box" data-key-box hidden>
+        Ключ: <span data-key></span>
+      </div>
+      <div class="result-box" data-result hidden></div>
+      <div class="actions">
+        <button class="pay-btn" data-pay type="button">Оплатить</button>
+        <button class="ghost" data-fail type="button">Оплата не прошла</button>
+      </div>
+      <p class="buy-error" data-error></p>
+    </main>
+  </div>
+  <script src="js/order.js"></script>
+</body>
+</html>

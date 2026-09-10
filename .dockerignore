@@ -1,0 +1,8 @@
+node_modules
+.git
+.env
+.env.*
+!.env.production.example
+*.log
+.DS_Store
+pgdata

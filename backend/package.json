@@ -1,0 +1,24 @@
+{
+  "name": "digital-store-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "migrate": "node src/db/migrate.js",
+    "seed": "node src/db/seed.js",
+    "test:race": "node scripts/race-test.js",
+    "test:promo": "node scripts/promo-race.js",
+    "test:webhook-before": "node scripts/webhook-before-order-test.js",
+    "test:last-unit": "node scripts/last-unit-race.js",
+    "test:hold-expire": "node scripts/hold-expire.js",
+    "test:pay-idempotency": "node scripts/pay-idempotency.js",
+    "test:pay-vs-expire": "node scripts/pay-vs-expire.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  }
+}
